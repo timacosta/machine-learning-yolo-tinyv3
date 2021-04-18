@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowsScene = (scene as? UIWindowScene) else { return }
     window = UIWindow()
     window?.windowScene = windowsScene
-    let flowLayout = UICollectionViewLayout()
+    let flowLayout = UICollectionViewFlowLayout()
+    flowLayout.scrollDirection = .vertical
     let catalogueViewController = CatalogueViewController(collectionViewLayout: flowLayout)
     
     window?.rootViewController = catalogueViewController
