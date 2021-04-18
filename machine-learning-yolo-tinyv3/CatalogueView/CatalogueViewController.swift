@@ -14,7 +14,7 @@ class CatalogueViewController: UICollectionViewController {
     setupCollectionView()
     
   }
-  
+  //..
   func setupCollectionView() {
     collectionView.backgroundColor = .white
     collectionView.translatesAutoresizingMaskIntoConstraints = false
