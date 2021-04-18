@@ -27,7 +27,7 @@ class CatalogueViewController: UICollectionViewController {
 extension CatalogueViewController {
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 100
+    return 600
   }
   
   
