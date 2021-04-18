@@ -14,8 +14,9 @@ class CatalogueCell: UICollectionViewCell {
   lazy var catalogueImage: UIImageView = {
     let image = UIImageView()
     image.translatesAutoresizingMaskIntoConstraints = false
-    image.contentMode = .scaleToFill
-    image.layer.cornerRadius = 18
+    image.contentMode = .scaleAspectFill
+    image.clipsToBounds = true
+    image.layer.cornerRadius = 20
     return image
     
   }()

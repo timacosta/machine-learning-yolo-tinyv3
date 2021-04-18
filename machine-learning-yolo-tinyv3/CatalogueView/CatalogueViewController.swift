@@ -35,12 +35,12 @@ extension CatalogueViewController {
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatalogueCell.catalogueCellIdentifier, for: indexPath) as? CatalogueCell else {return UICollectionViewCell()}
     
-    let imagePath = "https://picsum.photos/id/2\(indexPath.row)/320/150"
-      //Bundle.main.bundlePath
-    //for index in 0 ..< 5 {
-        //imageView.image = UIImage(named: String(format: "00%i", index))
-    //}
-    cell.configure(with: imagePath)
+    
+    var imagesArray = [UIImage]()
+    (0...150).forEach { imagesArray.append(UIImage(named: "test_images/\($0)_") ?? UIImage())}
+    
+    cell.catalogueImage.image = imagesArray[indexPath.row]
+                                          
     return cell
     
   }
@@ -49,7 +49,7 @@ extension CatalogueViewController {
 
 extension CatalogueViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 400, height: 300)
+    return CGSize(width: 200, height: 200)
   }
   
 }
