@@ -12,9 +12,18 @@ class MainViewController: UIViewController {
   lazy private var buttonCatalogue: UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Catalogue", for: .highlighted)
-    button.backgroundColor = .cyan
+    button.setTitle("Catalogue", for: .normal)
+    button.setTitleColor(UIColor.black, for: .normal)
     button.addTarget(self, action: #selector(showCatalogue), for: .touchUpInside)
+    return button
+  }()
+  
+  lazy private var buttonSearchCatalogue: UIButton = {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle("Search picture", for: .normal)
+    button.setTitleColor(UIColor.black, for: .normal)
+    button.addTarget(self, action: #selector(searchPicture), for: .touchUpInside)
     return button
   }()
   
@@ -22,6 +31,11 @@ class MainViewController: UIViewController {
   func showCatalogue() {
     let catalogueViewController = CatalogueViewController()
     navigationController?.pushViewController(catalogueViewController, animated: true)
+  }
+  
+  @objc
+  func searchPicture() {
+    let searchViewController = SearchViewController()
   }
   
   override func loadView() {

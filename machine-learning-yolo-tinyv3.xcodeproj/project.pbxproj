@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023C6763262F3C740004C656 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6762262F3C740004C656 /* SearchViewController.swift */; };
 		028013C7262B86D0009AA742 /* CatalogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028013C6262B86D0009AA742 /* CatalogueCell.swift */; };
 		028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 028013CE262B8ECF009AA742 /* YOLOv3Tiny.mlmodel */; };
 		02A55584262E32C3006B598F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A55583262E32C3006B598F /* MainViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023C6762262F3C740004C656 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		028013C6262B86D0009AA742 /* CatalogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueCell.swift; sourceTree = "<group>"; };
 		028013CE262B8ECF009AA742 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		02A55583262E32C3006B598F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				028013C4262B853F009AA742 /* CatalogueView */,
 				02A55583262E32C3006B598F /* MainViewController.swift */,
+				023C6762262F3C740004C656 /* SearchViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C3E3D9262A112B007EFEB0 /* CatalogueViewController.swift in Sources */,
+				023C6763262F3C740004C656 /* SearchViewController.swift in Sources */,
 				02C3E3D5262A112B007EFEB0 /* AppDelegate.swift in Sources */,
 				028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */,
 				02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */,
