@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		028013C7262B86D0009AA742 /* CatalogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028013C6262B86D0009AA742 /* CatalogueCell.swift */; };
 		028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 028013CE262B8ECF009AA742 /* YOLOv3Tiny.mlmodel */; };
+		02A55584262E32C3006B598F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A55583262E32C3006B598F /* MainViewController.swift */; };
 		02C3E3D5262A112B007EFEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */; };
 		02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */; };
 		02C3E3D9262A112B007EFEB0 /* CatalogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D8262A112B007EFEB0 /* CatalogueViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		028013C6262B86D0009AA742 /* CatalogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueCell.swift; sourceTree = "<group>"; };
 		028013CE262B8ECF009AA742 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		02A55583262E32C3006B598F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		02C3E3D1262A112B007EFEB0 /* machine-learning-yolo-tinyv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "machine-learning-yolo-tinyv3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +46,8 @@
 		028013C4262B853F009AA742 /* CatalogueView */ = {
 			isa = PBXGroup;
 			children = (
-				02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */,
-				02C3E3D8262A112B007EFEB0 /* CatalogueViewController.swift */,
 				028013C6262B86D0009AA742 /* CatalogueCell.swift */,
+				02C3E3D8262A112B007EFEB0 /* CatalogueViewController.swift */,
 			);
 			path = CatalogueView;
 			sourceTree = "<group>";
@@ -57,6 +58,23 @@
 				028013CE262B8ECF009AA742 /* YOLOv3Tiny.mlmodel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		02A55582262E3287006B598F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		02A55588262E32D4006B598F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				028013C4262B853F009AA742 /* CatalogueView */,
+				02A55583262E32C3006B598F /* MainViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		02C3E3C8262A112B007EFEB0 = {
@@ -79,7 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				028013CA262B8EAA009AA742 /* Models */,
-				028013C4262B853F009AA742 /* CatalogueView */,
+				02A55582262E3287006B598F /* ViewModels */,
+				02A55588262E32D4006B598F /* Views */,
 				02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */,
 				02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */,
 				02C3E3DA262A112C007EFEB0 /* Main.storyboard */,
@@ -164,6 +183,7 @@
 				028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */,
 				02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */,
 				028013C7262B86D0009AA742 /* CatalogueCell.swift in Sources */,
+				02A55584262E32C3006B598F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

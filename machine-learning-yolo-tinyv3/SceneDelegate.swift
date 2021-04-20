@@ -19,12 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowsScene = (scene as? UIWindowScene) else { return }
     window = UIWindow()
     window?.windowScene = windowsScene
-    let flowLayout = UICollectionViewFlowLayout()
-    flowLayout.scrollDirection = .vertical
-    let catalogueViewController = CatalogueViewController(collectionViewLayout: flowLayout)
     
-    window?.rootViewController = catalogueViewController
+    //rootAppController of the app
+    let mainViewController = MainViewController()
+    
+    //navigation controller of the app
+    let navigationController = UINavigationController(rootViewController: mainViewController)
+    navigationController.popToRootViewController(animated: true)
+    
+    //TODO: not showing up
+    navigationController.tabBarItem.title = "Machine Learning Yolov3"
+    
+    window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
+    
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
