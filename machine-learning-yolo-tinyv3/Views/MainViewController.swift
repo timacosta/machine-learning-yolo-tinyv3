@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
   
-  lazy private var buttonCatalogue: UIButton = {
+  lazy private var btnCatalogue: UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("Catalogue", for: .normal)
@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     return button
   }()
   
-  lazy private var buttonSearchCatalogue: UIButton = {
+  lazy private var btnSearchCatalogue: UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("Search picture", for: .normal)
@@ -49,12 +49,15 @@ class MainViewController: UIViewController {
     view = UIView()
     view.backgroundColor = .white
     
-    view.addSubview(buttonCatalogue)
+    view.addSubview(btnCatalogue)
     NSLayoutConstraint.activate([
-      buttonCatalogue.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      buttonCatalogue.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      btnCatalogue.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      btnCatalogue.centerYAnchor.constraint(equalTo: view.centerYAnchor),
       //buttonCatalogue.topAnchor.constraint(equalTo: view.topAnchor)
     ])
+    
+    view.addSubview(btnSearchCatalogue)
+    
   }
   
   
