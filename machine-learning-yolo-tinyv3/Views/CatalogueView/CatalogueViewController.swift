@@ -77,7 +77,7 @@ extension CatalogueViewController: UICollectionViewDataSource {
 //MARK: - Delegate extension
 extension CatalogueViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //
+    //TODO
   }
 }
 

@@ -11,10 +11,48 @@ import Vision
 
 class SearchViewController: UIViewController {
   
+  lazy var searchController: UISearchController = {
+    let searchController = UISearchController()
+    
+    return searchController
+  }()
+  
+  /*lazy var searchBar: UISearchBar = {
+    let searchBar = UISearchBar()
+    searchBar.searchBarStyle = .prominent
+    searchBar.placeholder = "Introduce search term"
+    //searchBar.sizeToFit()
+    searchBar.isTranslucent = false
+    return searchBar
+  }()*/
+  
+  override func loadView() {
+    super.loadView()
+    setUpView()
+    
+  }
   
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  
+  func setUpView() {
+    view = UIView()
+    view.backgroundColor = .white
+    
+    navigationItem.searchController = searchController
+    searchController.hidesNavigationBarDuringPresentation = false
+    searchController.searchBar.becomeFirstResponder()
+    
+    
+    /*view.addSubview(searchBar)
+    
+    NSLayoutConstraint.activate([
+      searchBar.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      searchBar.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      searchBar.topAnchor.constraint(equalTo: view.topAnchor),
+      searchBar.leftAnchor.constraint(equalTo: view.leftAnchor),
+      searchBar.rightAnchor.constraint(equalTo: view.rightAnchor)
+    ])*/
+    
   }
   
  

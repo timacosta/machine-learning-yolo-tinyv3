@@ -24,11 +24,11 @@ class MainViewController: UIViewController {
   lazy private var btnSearchCatalogue: UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Search picture", for: .normal)
-    //button.setImage(UIImage(systemName: "doc.text.magnifyingglass"), for: .normal)
     button.setTitleColor(UIColor.black, for: .normal)
+    button.setTitle("Search picture", for: .normal)
+    button.setImage(UIImage(systemName: "doc.text.magnifyingglass"), for: .normal)
     button.addTarget(self, action: #selector(searchPicture), for: .touchUpInside)
-    //button.alignVertical()
+    button.alignVertical()
     return button
   }()
   
