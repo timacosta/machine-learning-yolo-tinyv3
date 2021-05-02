@@ -24,9 +24,10 @@ class MainViewController: UIViewController {
   lazy private var btnSearchCatalogue: UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
+    button.contentVerticalAlignment = .top
     button.setTitleColor(UIColor.black, for: .normal)
     button.setTitle("Search picture", for: .normal)
-    button.setImage(UIImage(systemName: "doc.text.magnifyingglass"), for: .normal)
+    button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
     button.addTarget(self, action: #selector(searchPicture), for: .touchUpInside)
     button.alignVertical()
     return button
@@ -57,7 +58,7 @@ class MainViewController: UIViewController {
     
     view.addSubview(btnCatalogue)
     NSLayoutConstraint.activate([
-      btnCatalogue.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 100.0),
+      btnCatalogue.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 80.0),
       btnCatalogue.centerYAnchor.constraint(equalTo: view.centerYAnchor)
     ])
     

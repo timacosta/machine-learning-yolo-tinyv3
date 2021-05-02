@@ -17,6 +17,7 @@
 		02C3E3DC262A112C007EFEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DA262A112C007EFEB0 /* Main.storyboard */; };
 		02C3E3DE262A112D007EFEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DD262A112D007EFEB0 /* Assets.xcassets */; };
 		02C3E3E1262A112D007EFEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */; };
+		02FB43CF2638C77A00D032B5 /* YOLOv3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		02C3E3DD262A112D007EFEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C3E3E0262A112D007EFEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02C3E3E2262A112D007EFEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOLOv3Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */,
+				02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				02C3E3D9262A112B007EFEB0 /* CatalogueViewController.swift in Sources */,
 				023C6763262F3C740004C656 /* SearchViewController.swift in Sources */,
+				02FB43CF2638C77A00D032B5 /* YOLOv3Model.swift in Sources */,
 				02C3E3D5262A112B007EFEB0 /* AppDelegate.swift in Sources */,
 				028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */,
 				02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */,

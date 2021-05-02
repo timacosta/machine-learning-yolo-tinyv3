@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import CoreML
-import Vision
+
 
 class SearchViewController: UIViewController {
   
@@ -25,6 +24,8 @@ class SearchViewController: UIViewController {
     searchBar.isTranslucent = false
     return searchBar
   }()*/
+  
+  
   
   override func loadView() {
     super.loadView()
