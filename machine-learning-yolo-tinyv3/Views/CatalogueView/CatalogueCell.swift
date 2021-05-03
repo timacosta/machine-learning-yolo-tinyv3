@@ -38,7 +38,7 @@ class CatalogueCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func configure(with imagePath: String) {
+  /*func configure(with imagePath: String) {
     guard let imageURL: URL = URL(string: imagePath) else { return }
     
     DispatchQueue.global(qos: .userInitiated).async {
@@ -52,6 +52,16 @@ class CatalogueCell: UICollectionViewCell {
       
     }
     
+  }*/
+  
+  func loadImagesFromBundle(callback: @escaping ([UIImage]) -> Void)  {
+    var imagesArray = [UIImage]()
+    DispatchQueue.global(qos: .userInitiated).async {
+      imagesArray = (0...160).compactMap({ UIImage(named: "test_images/\($0)_") ?? UIImage()})
+      
+      callback(imagesArray)
+      
+    }
   }
   
 }

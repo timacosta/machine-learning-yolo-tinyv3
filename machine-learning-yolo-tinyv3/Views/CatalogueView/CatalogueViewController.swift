@@ -11,9 +11,18 @@ class CatalogueViewController: UIViewController {
   
   lazy var flowLayout: UICollectionViewFlowLayout = {
     let numberOfColumns = 2
+    let sectionInset: CGFloat = 24
+    let minimumInteritemSpacing: CGFloat = 34
+    let minimumLineSpacing: CGFloat = 19
     let cellHeight: CGFloat = 200
+    
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .vertical
+    let width: CGFloat = (UIScreen.main.bounds.width - sectionInset * 2 - minimumInteritemSpacing * (CGFloat(numberOfColumns) - 1)) / CGFloat(numberOfColumns)
+    layout.itemSize = CGSize(width: width, height: cellHeight)
+    layout.minimumInteritemSpacing = minimumInteritemSpacing
+    layout.minimumLineSpacing = minimumLineSpacing
+    layout.sectionInset = UIEdgeInsets(top: sectionInset, left: sectionInset, bottom: sectionInset, right: sectionInset)
     return layout
   }()
   
@@ -62,13 +71,21 @@ extension CatalogueViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatalogueCell.catalogueCellIdentifier, for: indexPath) as? CatalogueCell else {return UICollectionViewCell()}
     
+    cell.loadImagesFromBundle { images in
+      DispatchQueue.main.async {
+        cell.catalogueImage.image = images[indexPath.row]
+      }
+      
+    }
     
-    var imagesArray = [UIImage]()
+    return cell
+    
+    /*var imagesArray = [UIImage]()
     (0...150).forEach { imagesArray.append(UIImage(named: "test_images/\($0)_") ?? UIImage())}
     
     cell.catalogueImage.image = imagesArray[indexPath.row]
                                           
-    return cell
+    return cell*/
     
   }
   
@@ -81,10 +98,4 @@ extension CatalogueViewController: UICollectionViewDelegate {
   }
 }
 
-extension CatalogueViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 200, height: 200)
-  }
-  
-}
 

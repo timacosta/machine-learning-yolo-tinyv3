@@ -50,8 +50,6 @@ class MainViewController: UIViewController {
     
   }
   
-
-  
   func setupView() {
     view = UIView()
     view.backgroundColor = .white

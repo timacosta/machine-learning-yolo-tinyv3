@@ -9,8 +9,13 @@ import Foundation
 import CoreML
 import AVFoundation
 import Vision
+import UIKit
 
-class YOLOv3Model {
+protocol YOLOv3ViewModelDelegate: class {
+  func didSelect()
+}
+
+class YOLOv3ViewModel {
   
   private var detectionOverlay: CALayer! = nil
   private var requests = [VNRequest]()

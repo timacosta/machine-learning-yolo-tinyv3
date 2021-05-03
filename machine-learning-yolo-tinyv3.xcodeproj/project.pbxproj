@@ -14,10 +14,9 @@
 		02C3E3D5262A112B007EFEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */; };
 		02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */; };
 		02C3E3D9262A112B007EFEB0 /* CatalogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3E3D8262A112B007EFEB0 /* CatalogueViewController.swift */; };
-		02C3E3DC262A112C007EFEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DA262A112C007EFEB0 /* Main.storyboard */; };
 		02C3E3DE262A112D007EFEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DD262A112D007EFEB0 /* Assets.xcassets */; };
 		02C3E3E1262A112D007EFEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */; };
-		02FB43CF2638C77A00D032B5 /* YOLOv3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */; };
+		02FB43CF2638C77A00D032B5 /* YOLOv3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB43CE2638C77A00D032B5 /* YOLOv3ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +28,10 @@
 		02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		02C3E3D8262A112B007EFEB0 /* CatalogueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewController.swift; sourceTree = "<group>"; };
-		02C3E3DB262A112C007EFEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02C3E3DD262A112D007EFEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C3E3E0262A112D007EFEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02C3E3E2262A112D007EFEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOLOv3Model.swift; sourceTree = "<group>"; };
+		02FB43CE2638C77A00D032B5 /* YOLOv3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOLOv3ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +65,7 @@
 		02A55582262E3287006B598F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */,
-				02FB43CE2638C77A00D032B5 /* YOLOv3Model.swift */,
+				02FB43CE2638C77A00D032B5 /* YOLOv3ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -76,11 +73,46 @@
 		02A55588262E32D4006B598F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */,
+				02A6CCFD264067FB003E1466 /* SearchViewController */,
+				02A6CCFC264067F1003E1466 /* MainView */,
 				028013C4262B853F009AA742 /* CatalogueView */,
-				02A55583262E32C3006B598F /* MainViewController.swift */,
-				023C6762262F3C740004C656 /* SearchViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		02A6CCF826406730003E1466 /* ApplicationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */,
+				02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */,
+			);
+			path = ApplicationDelegate;
+			sourceTree = "<group>";
+		};
+		02A6CCFA26406758003E1466 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02C3E3DD262A112D007EFEB0 /* Assets.xcassets */,
+				02C3E3E2262A112D007EFEB0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02A6CCFC264067F1003E1466 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				02A55583262E32C3006B598F /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		02A6CCFD264067FB003E1466 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				023C6762262F3C740004C656 /* SearchViewController.swift */,
+			);
+			path = SearchViewController;
 			sourceTree = "<group>";
 		};
 		02C3E3C8262A112B007EFEB0 = {
@@ -102,14 +134,11 @@
 		02C3E3D3262A112B007EFEB0 /* machine-learning-yolo-tinyv3 */ = {
 			isa = PBXGroup;
 			children = (
+				02A6CCFA26406758003E1466 /* Supporting Files */,
+				02A6CCF826406730003E1466 /* ApplicationDelegate */,
 				028013CA262B8EAA009AA742 /* Models */,
 				02A55582262E3287006B598F /* ViewModels */,
 				02A55588262E32D4006B598F /* Views */,
-				02C3E3D4262A112B007EFEB0 /* AppDelegate.swift */,
-				02C3E3D6262A112B007EFEB0 /* SceneDelegate.swift */,
-				02C3E3DA262A112C007EFEB0 /* Main.storyboard */,
-				02C3E3DD262A112D007EFEB0 /* Assets.xcassets */,
-				02C3E3E2262A112D007EFEB0 /* Info.plist */,
 			);
 			path = "machine-learning-yolo-tinyv3";
 			sourceTree = "<group>";
@@ -173,7 +202,6 @@
 			files = (
 				02C3E3E1262A112D007EFEB0 /* LaunchScreen.storyboard in Resources */,
 				02C3E3DE262A112D007EFEB0 /* Assets.xcassets in Resources */,
-				02C3E3DC262A112C007EFEB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +214,7 @@
 			files = (
 				02C3E3D9262A112B007EFEB0 /* CatalogueViewController.swift in Sources */,
 				023C6763262F3C740004C656 /* SearchViewController.swift in Sources */,
-				02FB43CF2638C77A00D032B5 /* YOLOv3Model.swift in Sources */,
+				02FB43CF2638C77A00D032B5 /* YOLOv3ViewModel.swift in Sources */,
 				02C3E3D5262A112B007EFEB0 /* AppDelegate.swift in Sources */,
 				028013CF262B8ECF009AA742 /* YOLOv3Tiny.mlmodel in Sources */,
 				02C3E3D7262A112B007EFEB0 /* SceneDelegate.swift in Sources */,
@@ -198,14 +226,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02C3E3DA262A112C007EFEB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02C3E3DB262A112C007EFEB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02C3E3DF262A112D007EFEB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,7 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "machine-learning-yolo-tinyv3/Info.plist";
+				INFOPLIST_FILE = "machine-learning-yolo-tinyv3/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "machine-learning-yolo-tinyv3/Info.plist";
+				INFOPLIST_FILE = "machine-learning-yolo-tinyv3/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
